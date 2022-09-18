@@ -14,7 +14,7 @@
 // *************uncomment H8mini_blue_board for the H8 mini flight controller with blue circuit board
 //#define BWHOOP
 //#define E011
-//#define H8mini_blue_board
+//#define H8mini_blue_board //7元四轴
 #define Alienwhoop_ZERO
 
 
@@ -475,17 +475,21 @@
 
 #ifdef H8mini_blue_board
 //LEDS
-#define LED_NUMBER 1
-#define LED1PIN GPIO_Pin_1
-#define LED1PORT GPIOF
-#define LED2PIN GPIO_Pin_3
+#define LED_NUMBER 4
+#define LED1PIN GPIO_Pin_5
+#define LED1PORT GPIOB
+#define LED2PIN GPIO_Pin_12
 #define LED2PORT GPIOA
+#define LED3PIN GPIO_Pin_15
+#define LED3PORT GPIOA
+#define LED4PIN GPIO_Pin_2
+#define LED4PORT GPIOB
 
 //SOFT I2C & GYRO
-#define SOFTI2C_SDAPIN GPIO_Pin_10
-#define SOFTI2C_SDAPORT GPIOA
-#define SOFTI2C_SCLPIN GPIO_Pin_9
-#define SOFTI2C_SCLPORT GPIOA
+#define SOFTI2C_SDAPIN GPIO_Pin_7
+#define SOFTI2C_SDAPORT GPIOB
+#define SOFTI2C_SCLPIN GPIO_Pin_6
+#define SOFTI2C_SCLPORT GPIOB
 #define SOFTI2C_GYRO_ADDRESS 0x68
 #define SOFTI2C_PUSHPULL_CLK
 #define GYRO_ID_1 0x68
@@ -511,29 +515,31 @@
 #define SPI_SS_PORT GPIOA
 #define RADIO_CHECK
 #else
-#define SOFTSPI_3WIRE
-#define SPI_MOSI_PIN GPIO_Pin_1
+#define SOFTSPI_4WIRE
+#define SPI_MOSI_PIN GPIO_Pin_7
 #define SPI_MOSI_PORT GPIOA
-#define SPI_CLK_PIN GPIO_Pin_2
+#define SPI_MISO_PIN GPIO_Pin_6
+#define SPI_MISO_PORT GPIOA
+#define SPI_CLK_PIN GPIO_Pin_5
 #define SPI_CLK_PORT GPIOA
-#define SPI_SS_PIN GPIO_Pin_3
+#define SPI_SS_PIN GPIO_Pin_4
 #define SPI_SS_PORT GPIOA
-#define RADIO_XN297L
+#define RADIO_XN297
 #define RADIO_CHECK
 #endif
 
 //VOLTAGE DIVIDER
-#define BATTERYPIN GPIO_Pin_5
+#define BATTERYPIN GPIO_Pin_0
 #define BATTERYPORT GPIOA
-#define BATTERY_ADC_CHANNEL ADC_Channel_5
-#define ADC_SCALEFACTOR 0.001364
+#define BATTERY_ADC_CHANNEL ADC_Channel_7
+#define ADC_SCALEFACTOR 0.15
 #define ADC_REF 1.17857f
 
 // Assingment of pin to motor
-#define MOTOR0_PIN_PA6 // motor 0 back-left
-#define MOTOR1_PIN_PA4 // motor 1 front-left
-#define MOTOR2_PIN_PB1 // motor 2 back-right
-#define MOTOR3_PIN_PA7 // motor 3 front-right
+#define MOTOR0_PIN_PB8 // motor 0 back-left
+#define MOTOR1_PIN_PA11 // motor 1 front-left
+#define MOTOR2_PIN_PA3 // motor 2 back-right
+#define MOTOR3_PIN_PA8 // motor 3 front-right
 #endif
 
 #ifdef Alienwhoop_ZERO
