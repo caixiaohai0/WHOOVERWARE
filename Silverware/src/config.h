@@ -14,8 +14,8 @@
 // *************uncomment H8mini_blue_board for the H8 mini flight controller with blue circuit board
 //#define BWHOOP
 //#define E011
-//#define H8mini_blue_board //7元四轴
-#define Alienwhoop_ZERO
+#define H8mini_blue_board //7元四轴
+//#define Alienwhoop_ZERO
 
 
 //**********************************************************************************************************************
@@ -46,11 +46,11 @@
 //#define RX_CG023_PROTOCOL
 //#define RX_H7_PROTOCOL
 //#define RX_BAYANG_PROTOCOL
-//#define RX_BAYANG_PROTOCOL_TELEMETRY
+#define RX_BAYANG_PROTOCOL_TELEMETRY
 //#define RX_BAYANG_PROTOCOL_BLE_BEACON
 //#define RX_BAYANG_BLE_APP
 //#define RX_CX10BLUE_PROTOCOL
-#define RX_SBUS
+//#define RX_SBUS
 
 // *************Transmitter Type Selection
 //#define USE_STOCK_TX
@@ -151,7 +151,7 @@
 #define MOTOR_CURVE_NONE
 //#define MOTOR_CURVE_6MM_490HZ
 //#define MOTOR_CURVE_85MM_8KHZ
-//#define MOTOR_CURVE_85MM_32KHZ
+#define MOTOR_CURVE_85MM_32KHZ
 //#define BOLDCLASH_716MM_8K
 //#define BOLDCLASH_716MM_24K
 
